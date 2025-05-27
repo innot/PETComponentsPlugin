@@ -147,16 +147,14 @@ public class MOS6502 extends Node implements Element {
     	
     	// get the current input pin values
     	sim_input.ready = rdyIn.getBool();
-    	sim_input.reset = resetIn.getBool();	// The sim6502 uses active high
-    	sim_input.nmi = nmiIn.getBool();		// dito
-    	sim_input.irq = irqIn.getBool();		// dito
+    	sim_input.reset = !resetIn.getBool();	// The sim6502 uses active high
+    	sim_input.nmi = !nmiIn.getBool();		// dito
+    	sim_input.irq = !irqIn.getBool();		// dito
     	sim_input.data = (int)dataIn.getValue();
 
     	try {
 	    	if (!new_clock) {
 	        	sim_output = sim6502.tick(sim_input);
-	    	} else {
-	    		sim_output = sim6502.m6502_tock(sim_input);
 	    	}
     	} catch (Exception e){
     		throw new NodeException("Error in 6502 simulation",e);
