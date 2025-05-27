@@ -22,7 +22,7 @@
         </repository>
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/innot/Sim6502Java</url>
+            <url>https://maven.pkg.github.com/innot/*</url>
         </repository>
     </repositories>
 
