@@ -6,7 +6,7 @@
 
     <groupId>de.innot</groupId>
     <artifactId>petcomponentsplugin</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <name>PET Components Plugin for the Digital Simulator</name>
     <description>This Plugin contains some custom components needed for the PETDigitalSimulator Project</description>
 
@@ -116,7 +116,7 @@
         <dependency>
 			<groupId>de.innot.sim6502</groupId>
 			<artifactId>Sim6502Java</artifactId>
-			<version>0.9.2</version>
+			<version>0.9.3</version>
 		</dependency>
     </dependencies>
 
